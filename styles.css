@@ -1,94 +1,187 @@
-body {
-  background-color: #eee9da;
+/* ===== Base Styles ===== */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
 }
 
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  padding-top: 70px; /* space for sticky header */
+}
+
+/* ===== Header ===== */
 header {
-  background-color: #93bfcf;
-  padding: 10px; /* space inside */
-  margin-bottom: 10px; /* space outside */
-  border-bottom: 2px solid #555;
+  background: #4a90e2;
+  color: white;
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-  margin: 0;
+  font-size: 1.5rem;
 }
 
-h1,
-h2 {
-  color: black;
-}
-
-/* ✅ Center page content */
-main {
-  margin: 10px;
-  padding: 10px;
-  border-radius: 8px;
-}
-
-/* ✅ Navigation */
 nav ul {
   list-style: none;
-  padding: 0;
-  margin: 10px 0 0 0;
   display: flex;
-  justify-content: right;
   gap: 20px;
 }
 
-nav ul li a {
+nav a {
   text-decoration: none;
-  color: black;
+  color: white;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #dbeafe;
+}
+
+/* ===== Main Content ===== */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #4a90e2;
+  border-bottom: 2px solid #4a90e2;
+  padding-bottom: 5px;
+}
+
+h3 {
+  margin: 15px 0 10px;
+  color: #333;
+}
+
+/* ===== Lists ===== */
+ul,
+ol,
+dl {
+  margin: 10px 20px;
+}
+
+dt {
   font-weight: bold;
+  margin-top: 5px;
 }
 
-nav ul li a:hover {
-  color: #4a7a91;
-}
-
-/* ✅ Table */
-
-table,
-th,
-td {
-  border: 1px solid black;
+/* ===== Table ===== */
+table {
+  width: 100%;
   border-collapse: collapse;
+  margin-top: 10px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
+
 th,
 td {
-  padding: 8px;
+  padding: 12px;
   text-align: left;
+}
+
+thead {
+  background: #4a90e2;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background: #f2f6fa;
+}
+
+/* ===== Media ===== */
+img,
+video {
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+audio {
+  margin-top: 10px;
+}
+
+/* ===== Form ===== */
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 15px;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #4a90e2;
+}
+
+label {
+  display: block;
+  margin: 8px 0 4px;
 }
 
 input,
 select,
 button {
-  margin: 8px 0;
+  width: 100%;
   padding: 10px;
+  margin-bottom: 12px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
 }
 
 button {
-  background-color: #6096b4;
+  background: #4a90e2;
   color: white;
+  font-weight: bold;
+  border: none;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 button:hover {
-  background-color: #4a7a91;
+  background: #357abd;
 }
 
-/* ✅ Footer */
+/* ===== Footer ===== */
 footer {
   text-align: center;
   padding: 15px;
-  margin-top: 20px;
-  background: #93bfcf;
-  border-top: 2px solid #555;
+  margin-top: 40px;
+  background: #4a90e2;
+  color: white;
+  border-top: 3px solid #357abd;
 }
