@@ -163,6 +163,13 @@ select:focus {
   box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
 }
 
+/* Reset full-width for checkboxes */
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px; /* space between box and text */
+  transform: scale(1.2); /* optional: makes checkbox slightly larger */
+}
+
 button {
   background: #4a90e2;
   color: white;
